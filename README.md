@@ -1,23 +1,24 @@
-# E-Commerce Chatbot using RAG (LangChain + OpenAI + AstraDB)
 
-An intelligent chatbot that answers product-related queries by combining Retrieval-Augmented Generation (RAG) with LangChain, OpenAI Embeddings, and AstraDB vector storage. Built to handle Flipkart-style headset and earbud product data and deployed using Flask on AWS EC2.
+# 🚀 E-Commerce Chatbot using RAG (LangChain + OpenAI + AstraDB)
+
+A powerful, intelligent chatbot built for answering e-commerce product-related queries using **Retrieval-Augmented Generation (RAG)**. Leveraging **LangChain**, **OpenAI Embeddings**, and **AstraDB**, this solution is optimized for handling headset and earbud product data from Flipkart. The chatbot is deployed via **Flask** on **AWS EC2**, offering a sleek web interface for real-time interaction.
 
 ![Chat Demo 1](images/image1.png)
 ![Chat Demo 2](images/image2.png)
 
 ---
 
-## Features
+## ✨ Features
 
-- End-to-end product question-answering system powered by LLMs.
-- Embedding-based semantic retrieval using OpenAI and LangChain.
-- Product metadata stored and queried from AstraDB.
-- Flask-based web interface for real-time user interaction.
-- Fully deployed on AWS EC2 for accessible hosting.
+- 💡 **Intelligent Q&A system** powered by LLMs  
+- 🔍 **Semantic product search** via OpenAI embeddings  
+- ⚡ **Fast vector similarity** with AstraDB  
+- 🌐 **Real-time web UI** using Flask  
+- ☁️ **Fully deployed on AWS EC2**
 
 ---
 
-## Tech Stack
+## 🧰 Tech Stack
 
 | Component     | Description                                         |
 |---------------|-----------------------------------------------------|
@@ -30,7 +31,7 @@ An intelligent chatbot that answers product-related queries by combining Retriev
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```plaintext
 ecomm-chatbot/
@@ -40,11 +41,7 @@ ecomm-chatbot/
 ├── data/
 │   └── flipkart_products.csv    # Product dataset
 │
-├── ecombot/
-│   ├── __init__.py
-│   ├── data_converter.py        # Converts CSV to LangChain documents
-│   ├── ingest.py                # Embedding generation and ingestion
-│   └── retr_gen.py              # Retrieval and response logic
+├── ecombot/                     # Core chatbot modules
 │
 ├── templates/
 │   └── chat.html                # HTML UI for chatbot
@@ -52,56 +49,56 @@ ecomm-chatbot/
 ├── static/
 │   └── style.css                # UI styling
 │
-├── images/
-│   ├── image1.png
-│   └── image2.png
+├── images/                      # Demo screenshots
 │
 └── README.md
 ```
 
 ---
 
-## How It Works
+## ⚙️ How It Works
 
-1. Product data is parsed and converted into document chunks.
-2. OpenAI embeddings are generated for each chunk.
-3. Embeddings and metadata are stored in AstraDB.
-4. User queries are passed through a LangChain retriever to fetch relevant chunks.
-5. Retrieved content is used to generate answers via a language model.
-6. Final response is rendered on a web interface using Flask.
-
----
-
-## Running Locally
-
-1. Install dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-2. Run the Flask application:
-
-   ```bash
-   python app.py
-   ```
-
-3. Open your browser and navigate to `http://localhost:5000`.
+1. Product data is parsed and chunked into documents.  
+2. OpenAI creates embeddings for each document.  
+3. Embeddings + metadata are stored in AstraDB.  
+4. LangChain retrieves the most relevant chunks.  
+5. An LLM generates a response based on context.  
+6. Flask displays the response in the browser.
 
 ---
 
-## Deployment
+## 🧪 Running Locally
 
-- Hosted on AWS EC2
-- Vector database and metadata stored in AstraDB
-- LLM-powered responses served through OpenAI API
-- Docker-compatible for containerized deployment
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the Flask server:
+
+```bash
+python app.py
+```
+
+Open your browser and go to: [http://localhost:5000](http://localhost:5000)
 
 ---
 
-## Future Improvements
+## 🚀 Deployment
 
-- Integrate voice input via speech-to-text
-- Extend support for multiple product categories
-- Enable user chat history and session tracking
-- Add query filters such as brand, price range, etc.
+- ✅ Deployed on **AWS EC2**  
+- 🗃️ Uses **AstraDB** for vector search  
+- 🧠 Powered by **OpenAI** for response generation  
+- 🐳 Ready for **Docker** containerization
+
+---
+
+## 🔮 Future Enhancements
+
+- 🎙️ Voice input support  
+- 🛒 Multi-category product handling  
+- 📚 Chat history and session tracking  
+- 🎯 Query filters (e.g., brand, price, rating)
+
+---
